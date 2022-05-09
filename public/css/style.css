@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  text-decoration: none;
+  overflow: hidden;
+  outline: none;
+}
+
+a, button, label, input, textarea {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Koulen", cursive;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  font-size: 2rem;
+  background-color: rgba(76, 174, 79, 0.8);
+  color: #212121;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  font-family: "Koulen", cursive;
+  letter-spacing: 0.3rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a:hover {
+  background-color: #4cae4f;
+}
+
+main {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section:first-of-type {
+  width: 100%;
+}
+
+main header {
+  height: 8rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#menu-box {
+  height: 100vh;
+  position: relative;
+}
+
+#menu-box header {
+  background-color: #4cae4f;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+}
+
+#menu-box header h1 {
+  color: #212121;
+}
+
+#menu-box menu {
+  height: 100%;
+  background-color: #ededed;
+  width: 30rem;
+  padding: 13.5rem 3rem 3rem;
+}
+
+#main {
+  position: relative;
+}
+
+#main header {
+  background-color: #212121;
+  height: 10rem;
+}
+
+#main header#header {
+  position: absolute;
+  width: 100%;
+}
+
+#main header h1 {
+  color: white;
+  letter-spacing: 0.3rem;
+}
+
+#main header aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main header aside h2 {
+  margin-right: 2rem;
+  color: white;
+}
+
+#main header aside a {
+  font-size: 1.5rem;
+  font-family: "Koulen", cursive;
+  padding: 0.5rem;
+  opacity: 0.5;
+  color: #212121;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  letter-spacing: normal;
+}
+
+#main header aside a:hover {
+  opacity: 1;
+}
+
+#main #content {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+}
+
+#main #content header {
+  background-color: transparent !important;
+}
+
+#main #content header:first-of-type h2 {
+  font-size: 4rem !important;
+}
+
+#main #content header a {
+  background-color: transparent;
+  border: 0.2rem solid #4cae4f;
+  letter-spacing: normal;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#main #content hr {
+  display: block;
+  border: 0.1rem solid #ededed;
+  width: auto;
+  margin: auto 2rem;
+}
+
+#main #content .box {
+  padding: 2rem;
+}
+
+#main #content .card-box {
+  padding: 0 2rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 2rem;
+  border-right: 2rem solid white;
+}
+
+#main #content .card-box article {
+  padding: 1rem;
+  background-color: #212121;
+  display: inline-block;
+  color: white;
+  border-radius: 0.5rem;
+  min-width: 25rem;
+  margin-right: 2rem;
+}
+
+#main #content .card-box article h2 {
+  font-size: 2rem;
+  font-family: "Koulen", cursive;
+}
+
+#main #content .card-box article p {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  margin: 0.5rem 0;
+}
+
+.login-header {
+  font-family: "Koulen", cursive;
+  text-align: center;
+  padding: 3rem;
+  background-color: #212121;
+}
+
+.login-header h1 {
+  font-size: 4rem !important;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+
+.login-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+}
+
+.login-form div {
+  width: 35rem;
+  margin-bottom: 2rem;
+}
+
+.login-form div input {
+  width: 100%;
+  height: 6rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border: solid 0.2rem #ededed;
+  border-radius: 1rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login-form div input:focus, .login-form div input:hover {
+  border-color: #4cae4f;
+}
+
+.login-form div h2 {
+  font-size: 3rem;
+}
+
+.login-form div h3 {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  font-family: "Koulen", cursive;
+}
+
+.login-form div button {
+  width: 100%;
+  height: 6rem;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  font-family: "Koulen", cursive;
+  background-color: rgba(76, 174, 79, 0.8);
+  border: 0.5rem solid #4cae4f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.table-box {
+  padding: 0 2rem;
+}
+
+.table-box div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.table-box div:nth-of-type(odd) {
+  background-color: #ededed;
+  border-radius: 0.5rem;
+}
+
+.table-box div:first-of-type {
+  background-color: #4cae4f;
+}
+
+.table-box div:first-of-type p {
+  font-family: "Koulen", cursive;
+}
+
+.table-box div p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.table-box div p a {
+  padding: auto;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: normal;
+}
+
+.event-box {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+a.event {
+  display: inline-block;
+  width: 25rem;
+  height: auto;
+  color: #4cae4f;
+  background-color: white !important;
+  padding: 2rem;
+  border: 0.2rem solid #ededed;
+  border-radius: 0.5rem;
+  margin: 0 2rem 2rem 0rem;
+}
+
+a.event h1 {
+  font-size: 3rem;
+}
+
+a.event p {
+  font-size: 2rem;
+}
+
+a.event hr {
+  width: 100%;
+  margin: 1rem 0 !important;
+}
+
+.box form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.box form div select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.box form div textarea {
+  resize: none;
+  height: 16rem !important;
+}
+
+.box form div input, .box form div textarea, .box form div select {
+  width: 40rem;
+  height: 6rem;
+  border: 0.2rem solid #ededed;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.box form div input:hover, .box form div input:focus, .box form div textarea:hover, .box form div textarea:focus, .box form div select:hover, .box form div select:focus {
+  border-color: #4cae4f;
+}
+
+.box form div label {
+  font-size: 2.5rem;
+  font-family: "Koulen", cursive;
+}
+
+.box form button {
+  width: 40rem;
+  height: 6rem;
+  font-family: "Koulen", cursive;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border: 0.5rem solid #4cae4f;
+  background-color: rgba(76, 174, 79, 0.8);
+  margin: 1rem auto;
+}
+
+.box form p.error {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: red;
+  font-family: "Koulen", cursive;
+}
+
+.box form a {
+  color: #4cae4f;
+  background-color: transparent;
+}
+
+.message-box {
+  color: red;
+  text-align: center;
+  padding: 3rem 0 0 0;
+}
+
+.message-box h2 {
+  font-size: 3rem;
+  font-family: "Koulen", cursive;
+}
+
+.message-box h3 {
+  color: #212121;
+  font-size: 2rem;
+  font-family: "Koulen", cursive;
+  margin-top: -3rem;
+}
+/*# sourceMappingURL=style.css.map */
