@@ -15,7 +15,7 @@
     </div>
 @endif
 <div class="box">
-    <form action="{{ route('createChannel', [$event->slug]) }}" method="POST">
+    <form action="{{ route('channel.store', ['event' => $event->slug]) }}" method="POST">
         @csrf
         <div>
             <label for="name">
@@ -32,7 +32,7 @@
         <button type="submit">
             Save channel
         </button>
-        <a href="{{ route('viewEvent', [$event->slug]) }}">
+        <a href="{{ route('event.show', [$event->slug]) }}">
             Cancel
         </a>
     </form>

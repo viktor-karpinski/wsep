@@ -6,7 +6,7 @@
         {{ $event->name }}
     </h2>
 
-    <a href="{{ route('viewEditEvent', [$event->slug]) }}">
+    <a href="{{ route('event.edit', [$event->slug]) }}">
         Edit event
     </a>
 </header>
@@ -16,7 +16,7 @@
         Tickets
     </h2>
 
-    <a href="{{ route('viewCreateTicket', [$event->slug]) }}">
+    <a href="{{ route('ticket.create', ['event' => $event->slug]) }}">
         Create new ticket
     </a>
 </header>
@@ -49,7 +49,7 @@
         Sessions
     </h2>
 
-    <a href="{{ route('viewCreateSession', [$event->slug]) }}">
+    <a href="{{ route('session.create', ['event' => $event->slug]) }}">
         Create new session
     </a>
 </header>
@@ -83,7 +83,7 @@
                     {{ $session->type }}
                 </p>
                 <p>
-                    <a href="{{ route('viewEditSession', [$session->id]) }}">{{ $session->title }}</a>
+                    <a href="{{ route('session.edit', [$session->id, 'event' => $event->slug]) }}">{{ $session->title }}</a>
                 </p>
                 <p>
                     {{ $session->speaker }}
@@ -112,7 +112,7 @@
         Channels
     </h2>
 
-    <a href="{{ route('viewCreateChannel', [$event->slug]) }}">
+    <a href="{{ route('channel.create', ['event' => $event->slug]) }}">
         Create new channel
     </a>
 </header>
@@ -142,7 +142,7 @@
         Rooms
     </h2>
 
-    <a href="{{ route('viewCreateRoom', [$event->slug]) }}">
+    <a href="{{ route('room.create', ['event' => $event->slug]) }}">
         Create new room
     </a>
 </header>

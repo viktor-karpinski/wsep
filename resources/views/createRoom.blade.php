@@ -15,7 +15,7 @@
     </div>
 @endif
 <div class="box">
-    <form action="{{ route('createRoom', [$event->slug]) }}" method="POST">
+    <form action="{{ route('room.store', ['event' => $event->slug]) }}" method="POST">
         @csrf
         <div>
             <label for="name">
@@ -61,7 +61,7 @@
         <button type="submit">
             Save room
         </button>
-        <a href="{{ route('viewEvent', [$event->slug]) }}">
+        <a href="{{ route('event.show', [$event->slug]) }}">
             Cancel
         </a>
     </form>

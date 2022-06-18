@@ -15,7 +15,7 @@
     </div>
 @endif
 <div class="box">
-    <form action="{{ route('createTicket', [$event->slug]) }}" method="POST">
+    <form action="{{ route('ticket.store', ['event' => $event->id]) }}" method="POST">
         @csrf
         <div>
             <label for="name">
@@ -64,7 +64,7 @@
         <button type="submit">
             Save ticket
         </button>
-        <a href="{{ route('viewEvent', [$event->slug]) }}">
+        <a href="{{ route('event.show', [$event->slug]) }}">
             Cancel
         </a>
     </form>

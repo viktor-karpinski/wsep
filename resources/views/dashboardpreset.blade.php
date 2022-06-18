@@ -10,7 +10,7 @@
                 </h1>
             </header>
             <menu>
-                <a href="{{ route('viewDashboard') }}">
+                <a href="/event/">
                     Manage Events
                 </a>
             </menu>

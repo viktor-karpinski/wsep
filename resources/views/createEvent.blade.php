@@ -15,7 +15,7 @@
     </div>
 @endif
 <div class="box">
-    <form action="{{ route('createEvent') }}" method="POST">
+    <form action="{{ route('event.store') }}" method="POST">
         @csrf
         <div>
             <label for="name">
@@ -30,7 +30,7 @@
         </div>
         <div>
             <label for="slug">
-                Cost
+                Slug
             </label>
             <input type="text" name="slug" id="slug" value="{{ old('slug') }}" autocomplete="off" placeholder="Slug" required>
              @if ($errors->first('slug'))
@@ -53,7 +53,7 @@
         <button type="submit">
             Save Event
         </button>
-        <a href="{{ route('viewDashboard') }}">
+        <a href="/event/">
             Cancel
         </a>
     </form>

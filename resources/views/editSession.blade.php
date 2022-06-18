@@ -15,8 +15,9 @@
     </div>
 @endif
 <div class="box">
-    <form action="{{ route('editSession', [$session->id]) }}" method="POST">
+    <form action="{{ route('session.update', [$session->id, 'event' => $event->slug]) }}" method="POST">
         @csrf
+        @method('PUT')
         <div>
              <label for="type">
                 Type
@@ -137,7 +138,7 @@
         <button type="submit">
             Save session
         </button>
-        <a href="{{ route('viewEvent', [$event->slug]) }}">
+        <a href="{{ route('event.show', [$event->slug]) }}">
             Cancel
         </a>
     </form>
