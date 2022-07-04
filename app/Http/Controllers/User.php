@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User as U;
 use Illuminate\Support\Facades\Session;
+use Log;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Controller
 {
@@ -16,7 +18,32 @@ class User extends Controller
      */
     public function index()
     {
+        Log::debug(Auth::user());
         return view('login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        // auth
+        if (Auth::attempt($credentials)) {
+            $token = Auth::user()->createToken('myapp');
+
+            return ['token' => $token->plainTextToken];
+        }
+
+        return response('error', 403);
+    }
+
+    public function logout(Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return response("logged out", 200);
     }
 
     /**

@@ -21,10 +21,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [Controller::class, 'dashboard']);
-Route::get('/logout/', [User::class, 'destroy'])->name('logout');
-Route::resource('organizer', User::class);
-Route::resource('event', EventController::class);
-Route::resource('ticket', TicketController::class);
-Route::resource('session', SessionController::class);
-Route::resource('channel', ChannelController::class);
-Route::resource('room', RoomController::class);
+//Route::get('/logout/', [User::class, 'destroy'])->name('logout');
+
+Route::middleware('auth')->group(function () {
+    Route::resource('organizer', User::class);
+    Route::resource('event', EventController::class);
+    Route::resource('ticket', TicketController::class);
+    Route::resource('session', SessionController::class);
+    Route::resource('channel', ChannelController::class);
+    Route::resource('room', RoomController::class);
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';

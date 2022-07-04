@@ -11,6 +11,8 @@ use App\Models\Session as Sesh;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use Log;
 
 class EventController extends Controller
 {
@@ -19,12 +21,18 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        if (!Session::has('user')) {
-            return redirect('organizer');
-        }
-        $user = User::where('email', '=', Session::get('user'))->first();
+        // if (!Session::has('user')) {
+        //     return redirect('organizer');
+        // }
+
+        Log::debug("in index");
+        Log::debug($request->user());
+
+        $user = Auth::user();
+
+        //$user = User::where('email', '=', Session::get('user'))->first();
         $events = Event::where('user_id', '=', $user->id)->get();
         return view('dashboard', ['user' => $user, 'events' => $events]);
     }
